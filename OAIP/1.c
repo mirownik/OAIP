@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <string.h>
 #define _CRT_SECURE_NO_WARNINGS
+#define max 20
 
 int main()
 {
@@ -230,26 +231,157 @@ int main()
 		case 1:
 		{
 			int n;
-			printf("vvedite kol-vo elementov massiva:\n");
-			scanf("%d", &n);
+			printf("vvedite kol-vo elementov massiva(ne bolshe %d):\n", max);
+			scanf_s("%d", &n);
 
-			int arr[n];
+			if (n > max)
+			{
+				printf("yooo, mnogo bro, perebor ti 4e\n");
+				return 0;
+			} 
+
+			int arr[max];
+
 			printf("vvedite elementi massiva:\n");
-			for (int i = 0; i < n; i++) {
-				scanf("%d", &arr[i]);
+			for (int i = 0; i < n; i++)
+			{
+				scanf_s("%d", &arr[i]);
 			}
 
 			printf("elementi massiva:\n");
-			for (int i = 0; i < n; i++) {
+			for (int i = 0; i < n; i++)
+			{
 				printf("%d ", arr[i]);
 			}
-			printf("\n");
-
 			return 0;
 		}
 		case 2:
 		{
+			int n;
+			printf("vvedite kol-vo elementov massiva(ne bolshe %d):\n", max);
+			scanf_s("%d", &n);
 
+			if (n > max)
+			{
+				printf("yooo, mnogo bro, perebor ti 4e\n");
+				return 0;
+			} 
+
+			int arr[max];
+
+			printf("vvedite elementi massiva:\n");
+			for (int i = 0; i < n; i++)
+			{
+				scanf_s("%d", &arr[i]);
+			}
+
+			printf("elementi massiva:\n");
+			for (int i = n - 1; i >= 0; i--)
+			{
+				printf("%d ", arr[i]);
+			}
+			return 0;
+		}
+		case 3:
+		{
+			int n;
+			printf("vvedite kol-vo elementov massiva(ne bolshe %d):\n", max);
+			scanf_s("%d", &n);
+
+			if (n > max)
+			{
+				printf("yooo, mnogo bro, perebor ti 4e\n");
+				return 0;
+			}
+
+			int arr[max];
+
+			printf("vvedite elementi massiva:\n");
+			for (int i = 0; i < n; i++)
+			{
+				scanf_s("%d", &arr[i]);
+			}
+
+			printf("elementi massiva:\n");
+			for (int i = 0; i < n; i++)
+			{
+				if (arr[i] % 2 == 0)
+				{
+					printf("%d ", arr[i]);
+				}
+			}
+			return 0;
+		}
+		case 4:
+		{
+			int n, porog;
+			printf("vvedite kol-vo elementov massiva(ne bolshe %d):\n", max);
+			scanf_s("%d", &n);
+
+			if (n > max)
+			{
+				printf("yooo, mnogo bro, perebor ti 4e\n");
+				return 0;
+			}
+
+			int arr[max];
+
+			printf("vvedite elementi massiva:\n");
+			for (int i = 0; i < n; i++)
+			{
+				scanf_s("%d", &arr[i]);
+			}
+
+			printf("vvedite porogovoe znachenie:\n");
+			scanf_s("%d", &porog);
+
+			if (porog > n)
+			{
+				printf("perebor\n");
+				return 0;
+			}
+
+			printf("elementi massiva, bolshe %d:\n", porog);
+			for (int i = 0; i < n; i++)
+			{
+				if (arr[i] > porog)
+				{
+					printf("%d ", arr[i]);
+				}
+			}
+			return 0;
+		}
+		case 5:
+		{
+			int n;
+
+			printf("vvedite kol-vo elementov massiva(ne bolshe %d):\n", max);
+			scanf_s("%d", &n);
+
+			if (n > max)
+			{
+				printf("yooo, mnogo bro, perebor ti 4e\n");
+				return 0;
+			}
+			
+			int arr[max];
+
+			printf("vvedite elementi massiva(-1 dlya ostanovki):\n");
+			for (int i = 0; i < n; i++)
+			{
+				scanf_s("%d", &arr[i]);
+			}
+
+			printf("elementi massiva(do -1):\n");
+			for (int i = 0; i < n; i++)
+			{
+				if (arr[i] == -1)
+				{
+					break;
+				}
+				printf("%d ", arr[i]);
+			}
+			return 0;
 		}
 		}
 	}
