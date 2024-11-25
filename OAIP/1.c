@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <time.h>
 #define _CRT_SECURE_NO_WARNINGS
 #define max 20
 
@@ -27,7 +28,6 @@ int main()
 				printf("chisla ravni =))");
 			else
 				printf("chisla ne ravni =((");
-
 			return 0;
 		}
 		case 2:
@@ -382,6 +382,33 @@ int main()
 				printf("%d ", arr[i]);
 			}
 			return 0;
+		}
+		case 6:
+		{
+			int arr[max];
+
+			srand(time(0));
+			printf("massive:\n");
+			for (int i = 0; i < max; i++)
+			{
+				arr[i] = rand() % 21 - 10;
+				printf("%d ", arr[i]);
+			}
+			printf("\n");
+
+			printf("polozhitelnie chisla:\n");
+			for (int i = 0; i < max; i++)
+			{
+				if (arr[i] > 0)
+				{
+					printf("%d ", arr[i]);
+				}
+			}
+			return 0;
+		}
+		case 7:
+		{
+
 		}
 		}
 	}
